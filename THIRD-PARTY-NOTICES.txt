@@ -1,0 +1,8 @@
+Purple Stream is an independent native Windows Forms application, not affiliated with Smart IPTV Stream Pro or Hung APP. It contains no proprietary code or assets from that application.
+
+Playback uses VideoLAN LibVLC Windows 3.0.24, distributed under the GNU LGPL 2.1 and component-specific licenses. Sources and build information: https://code.videolan.org/videolan/vlc/-/tree/3.0.24 and https://code.videolan.org/videolan/libvlc-nuget . Native libraries remain separate and replaceable. License files shipped in the NuGet package are retained where available. VLC component source: https://download.videolan.org/pub/videolan/vlc/3.0.24/vlc-3.0.24.tar.xz .
+
+Microsoft .NET runtime and System.Security.Cryptography.ProtectedData: MIT and accompanying third-party notices; https://github.com/dotnet/runtime . Runtime notices are bundled by the publish process.
+
+
+Country flags: original programmatic offline icons; additional flag images may be downloaded and cached at runtime from Flagpedia/Flagcdn (https://flagpedia.net/download/api and https://flagcdn.com). Only a public country code is requested; provider credentials are not sent to the flag service.
