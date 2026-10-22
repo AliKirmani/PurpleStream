@@ -1,0 +1,29 @@
+name: Windows build
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-dotnet@v6
+        with:
+          dotnet-version: '8.0.x'
+      - name: Publish
+        run: dotnet publish src/PurpleStream/PurpleStream.csproj -c Release -r win-x64 --self-contained true -o artifacts/publish
+      - name: Directory regression checks
+        shell: pwsh
+        run: |
+          $process = Start-Process artifacts/publish/PurpleStream.exe -ArgumentList '--directory-tests' -Wait -PassThru
+          if ($process.ExitCode -ne 0) { throw 'Directory regression checks failed' }
+          $report = Get-Content artifacts/publish/directory-test.txt -Raw
+          if ($report -notmatch '^PASS:') { throw 'Directory test report did not pass' }
+      - uses: actions/upload-artifact@v7
+        with:
+          name: windows-build
+          path: artifacts/publish/
+          if-no-files-found: error
