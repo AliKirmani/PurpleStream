@@ -1,0 +1,11 @@
+<Project Sdk="Microsoft.NET.Sdk">
+<PropertyGroup><OutputType>WinExe</OutputType><TargetFramework>net8.0-windows</TargetFramework><UseWindowsForms>true</UseWindowsForms><ImplicitUsings>enable</ImplicitUsings><Nullable>enable</Nullable><RuntimeIdentifier>win-x64</RuntimeIdentifier><SelfContained>true</SelfContained><RuntimeFrameworkVersion>8.0.32</RuntimeFrameworkVersion><ApplicationIcon>PurpleStream.ico</ApplicationIcon><Version>0.4.3</Version><ApplicationManifest>app.manifest</ApplicationManifest></PropertyGroup>
+<ItemGroup><PackageReference Include="VideoLAN.LibVLC.Windows" Version="3.0.24" /><PackageReference Include="System.Security.Cryptography.ProtectedData" Version="8.0.0" /></ItemGroup>
+<ItemGroup><None Include="../../LICENSE" Link="LICENSE" CopyToOutputDirectory="PreserveNewest" /><None Include="../../LGPL-2.1.txt" Link="LGPL-2.1.txt" CopyToOutputDirectory="PreserveNewest" /><None Include="../../THIRD-PARTY-NOTICES.txt" Link="THIRD-PARTY-NOTICES.txt" CopyToOutputDirectory="PreserveNewest" /></ItemGroup></Project>
+
+
+
+
+
+
+
