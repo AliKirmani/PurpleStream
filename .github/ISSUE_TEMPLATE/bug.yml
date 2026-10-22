@@ -1,0 +1,28 @@
+name: Bug report
+description: Report a reproducible application problem without private account details
+body:
+  - type: markdown
+    attributes:
+      value: "Never include passwords, usernames, playlist URLs or personal screenshots. Use SECURITY.md for vulnerabilities."
+  - type: input
+    id: version
+    attributes:
+      label: App and Windows versions
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps, expected behavior and actual result
+      description: Use synthetic data and redact sensitive details.
+    validations:
+      required: true
+  - type: dropdown
+    id: source
+    attributes:
+      label: Source type
+      options:
+        - Xtream Codes
+        - M3U
+        - Local synthetic fixture
+        - Not applicable
